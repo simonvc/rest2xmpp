@@ -200,5 +200,5 @@ if __name__ == '__main__':
     # Setup the MUCBot and register plugins. Note that while plugins may
     # have interdependencies, the order in which you register them does
     # not matter.
-    app.run()
+    app.run(host='0.0.0.0')
 
