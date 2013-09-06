@@ -85,6 +85,8 @@ class MUCBot(sleekxmpp.ClientXMPP):
                                         # password=the_room_password,
                                         wait=True)
         self.send_message(mto="piltg@conference.xmpp.pearson-intl.net", mbody=self.message, mtype='groupchat')
+        for l in sys.stdin.readlines():
+          self.send_message(mto="piltg@conference.xmpp.pearson-intl.net", mbody=l, mtype='groupchat')
         self.disconnect(wait=True)
 
     def muc_message(self, msg):
